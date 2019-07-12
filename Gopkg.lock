@@ -90,7 +90,7 @@
   revision = "3a771d992973f24aa725d07868b467d1ddfceafb"
 
 [[projects]]
-  digest = "1:0b2ffe5c17b0a3d49cc0a0cc20a13f7e1223fca1cd26587248a6b65c801dd46e"
+  digest = "1:de74ae0dc93203ea7fea3ef733a0c63aa1096a1931f2143d13ade8e486c62853"
   name = "github.com/cloudevents/sdk-go"
   packages = [
     ".",
@@ -103,6 +103,7 @@
     "pkg/cloudevents/datacodec/xml",
     "pkg/cloudevents/observability",
     "pkg/cloudevents/transport",
+    "pkg/cloudevents/transport/amqp",
     "pkg/cloudevents/transport/http",
     "pkg/cloudevents/types",
   ]
@@ -1339,6 +1340,17 @@
   revision = "1104d6c75533160d27c02d3eb373fc567bd6d60c"
 
 [[projects]]
+  digest = "1:b6705f55a67be1361339f489fd2795b13633f4c16b1b3d6637ae71d473b65b1b"
+  name = "pack.ag/amqp"
+  packages = [
+    ".",
+    "internal/testconn",
+  ]
+  pruneopts = "NUT"
+  revision = "279d72ee259701e0e0e58d98a52a82ba172a2f5f"
+  version = "v0.11.2"
+
+[[projects]]
   digest = "1:399953e7c3ac9253dcf1fe909b0a74f6d1c4e974decefd6f5d361cab06249ccc"
   name = "sigs.k8s.io/controller-runtime"
   packages = [
@@ -1419,6 +1431,7 @@
     "github.com/cloudevents/sdk-go",
     "github.com/cloudevents/sdk-go/pkg/cloudevents",
     "github.com/cloudevents/sdk-go/pkg/cloudevents/client",
+    "github.com/cloudevents/sdk-go/pkg/cloudevents/transport/amqp",
     "github.com/cloudevents/sdk-go/pkg/cloudevents/transport/http",
     "github.com/cloudevents/sdk-go/pkg/cloudevents/types",
     "github.com/emicklei/go-restful",
@@ -1431,8 +1444,9 @@
     "github.com/knative/eventing/pkg/apis/sources/v1alpha1",
     "github.com/knative/eventing/pkg/client/clientset/versioned",
     "github.com/knative/serving/pkg/apis/serving/v1alpha1",
+    "github.com/knative/serving/pkg/apis/serving/v1beta1",
     "github.com/knative/serving/pkg/client/clientset/versioned",
-    "github.com/knative/serving/pkg/client/clientset/versioned/typed/serving/v1alpha1",
+    "github.com/knative/serving/pkg/client/clientset/versioned/typed/serving/v1beta1",
     "github.com/knative/test-infra/scripts",
     "github.com/knative/test-infra/tools/dep-collector",
     "github.com/onsi/ginkgo",
@@ -1479,12 +1493,14 @@
     "knative.dev/pkg/apis",
     "knative.dev/pkg/apis/duck",
     "knative.dev/pkg/apis/duck/v1alpha1",
+    "knative.dev/pkg/apis/duck/v1beta1",
     "knative.dev/pkg/kmp",
     "knative.dev/pkg/logging",
     "knative.dev/pkg/logging/logkey",
     "knative.dev/pkg/signals",
     "knative.dev/pkg/test",
     "knative.dev/pkg/test/logging",
+    "pack.ag/amqp",
     "sigs.k8s.io/controller-runtime/pkg/client",
     "sigs.k8s.io/controller-runtime/pkg/client/config",
     "sigs.k8s.io/controller-runtime/pkg/client/fake",
